@@ -46,3 +46,19 @@ pub extern fn TTF_RenderText_Blended_Wrapped(
     foreground: sdl.SDL_Color,
     wrap_length: u32,
 ) ?*sdl.SDL_Surface;
+
+pub extern fn TTF_RenderGlyph32_Blended(
+    font: *TTF_Font,
+    char: u32,
+    foreground: sdl.SDL_Color,
+) ?*sdl.SDL_Surface;
+
+pub extern fn TTF_GlyphMetrics32(
+    font: *TTF_Font,
+    ch: u32,
+    minx: *c_int,
+    maxx: *c_int,
+    miny: *c_int,
+    maxy: *c_int,
+    advance: *c_int,
+) c_int;
