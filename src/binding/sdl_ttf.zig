@@ -62,3 +62,8 @@ pub extern fn TTF_GlyphMetrics32(
     maxy: *c_int,
     advance: *c_int,
 ) c_int;
+
+pub extern fn TTF_GlyphIsProvided32(
+    font: *TTF_Font,
+    ch: u32,
+) c_int;
